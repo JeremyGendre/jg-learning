@@ -9,7 +9,7 @@ function App() {
     <BrowserRouter>
       <div className="text-gray-800 min-h-screen w-full bg-gray-50">
         <header className="sticky top-0 z-50">
-          <div className="w-full bg-gray-200 shadow-sm text-center px-3 py-2 flex">
+          <div className="w-full bg-gray-200 shadow-lg text-center px-3 py-2 flex">
             <Link to="/" className="transition duration-150 flex gap-1 py-2 px-4 bg-gray-300 ring-1 ring-transparent ring-inset hover:ring-gray-400 rounded-md">
               <HomeIcon className="text-xl" />
               Accueil
