@@ -4,6 +4,8 @@ import { useContinentContext } from "../contexts/ContinentContext";
 import Continent from "../interfaces/continent.interface";
 import Checkbox from "../components/Checkbox";
 import Button from "../components/Button";
+import { shuffle } from "../utils/shuffle";
+import Country from "../interfaces/country.interface";
 
 export default function ContinentCountriesCapitals() {
   const { continentName } = useParams();
@@ -11,6 +13,8 @@ export default function ContinentCountriesCapitals() {
   const [continent, setContinent] = useState<Continent|undefined>(undefined);
   const [showedCapitals, setShowedCapitals] = useState<string[]>([]);
   const [showCountryNameFirst, setShowCountryNameFirst] = useState(true);
+  const [countries, setCountries] = useState<Country[]>([]);
+  const [displayedCountries, setDisplayedCountries] = useState<Country[]>([]);
 
   useEffect(() => {
     setShowedCapitals([]);
@@ -19,19 +23,21 @@ export default function ContinentCountriesCapitals() {
     }
   }, [continentName, getContinent]);
 
-  function addCapital(capital: string) {
-    setShowedCapitals(old => [...old, capital]);
-  }
+  useEffect(() => {
+    if(continent){
+      setCountries(continent.countries);
+    }
+  }, [continent]);
 
-  function removeCapital(capital: string) {
-    setShowedCapitals(old => old.filter((c) => c !== capital));
-  }
+  useEffect(() => {
+    setDisplayedCountries(countries);
+  }, [countries]);
 
   function toggleCapital(capital: string) {
     if(showedCapitals.includes(capital)){
-      removeCapital(capital);
+      setShowedCapitals(old => old.filter((c) => c !== capital));
     } else {
-      addCapital(capital);
+      setShowedCapitals(old => [...old, capital]);
     }
   }
 
@@ -39,13 +45,18 @@ export default function ContinentCountriesCapitals() {
     setShowedCapitals(continent?.countries.map((c) => c.capital) || []);
   }
 
+  function shuffleCountries(){
+    return setDisplayedCountries(old => shuffle(old));
+  }
+
   return (
     <div className="w-full text-center mt-3">
       <div className="w-full flex justify-center gap-2 flex-wrap">
         <Checkbox label="Inverser l'affichage" id="show-country-name-frist" onChange={(val) => setShowCountryNameFirst(!val)} />
         <div className="flex flex-wrap gap-2 justify-center">
-          <Button label="Tout révéler" onClick={() => showAll()} disabled={showedCapitals.length === continent?.countries?.length} />
+          <Button label="Tout révéler" onClick={showAll} disabled={showedCapitals.length === displayedCountries.length} />
           <Button label="Tout cacher" onClick={() => setShowedCapitals([])} disabled={showedCapitals.length === 0} />
+          <Button label="Mélanger" onClick={shuffleCountries} />
         </div>
       </div>
       <div className="text-3xl font-bold my-4">
@@ -53,7 +64,7 @@ export default function ContinentCountriesCapitals() {
       </div>
       <div className="w-full flex justify-center">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 w-fit">
-          {continent?.countries.map((country) => (
+          {displayedCountries.map((country) => (
             <div 
               key={country.name} 
               className="relative select-none box-content text-center flex flex-col gap-1 px-4 py-4 bg-blue-200 rounded-md cursor-pointer ring ring-transparent ring-inset hover:ring-blue-400 transition duration-150"

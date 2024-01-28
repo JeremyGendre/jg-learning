@@ -13,7 +13,6 @@ export const useContinentContext = () => useContext(ContinentContext);
 
 export default function ContinentContextProvider({children}: PropsWithChildren<{}>){
 	const continents: Continent[] = continentJson;
-	console.log(continents)
 
 	const getContinent = useCallback((name: string) => {
 		return continents.find(continent => continent.name === name);
