@@ -1,30 +1,27 @@
-Welcome in this project that aim to makes learning of capitals easier !
-You can see the deployed version [here](https://capital-cities-7d034.web.app/)
+# Capital Cities
 
-## Available Scripts
+Welcome to this app allowing to learn easily all the capital cities around the world.
 
-In the project directory, you can run:
+## Installation
 
-### `npm start`
+- `npm install`    => install dep
+- `npm run start`  => start dev server
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Releasing a new version on github
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Change `version` in `package.json`
+- `git tag -a x.x.x -m "my tag description"`
+- `git push origin --tags`
+- Then draft a new release with the newly created tag on github.
 
-### `npm run build`
+## Deploying
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- `npm run build`
+- `firebase deploy`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+and that's it !
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If an error occured, try :
+- `firebase login --reauth` to allow firebase CLI to relog and make  it able to fetch the projects list and deploy. 
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+deployed url : [capital-cities-7d034.web.app](https://capital-cities-7d034.web.app/) 

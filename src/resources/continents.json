@@ -1,6 +1,7 @@
 [
   {
     "name": "Europe",
+    "image": "paris.jpeg",
     "countries": [
       {
         "name": "Allemagne",
@@ -190,6 +191,7 @@
   },
   {
     "name": "Afrique",
+    "image": "afrique.jpeg",
     "countries": [
       {
         "name": "Afrique du Sud",
@@ -411,6 +413,7 @@
   },
   {
     "name": "Amérique du Nord",
+    "image": "etats-unis.jpeg",
     "countries": [
       {
         "name": "Antigua-et-Barbuda",
@@ -524,6 +527,7 @@
   },
   {
     "name": "Amérique du Sud",
+    "image": "bresil.jpeg",
     "countries": [
       {
         "name": "Argentine",
@@ -581,6 +585,7 @@
   },
   {
     "name": "Asie",
+    "image": "inde.jpg",
     "countries": [
       {
         "name": "Afghanistan",
@@ -774,6 +779,7 @@
   },
   {
     "name": "Océanie",
+    "image": "australie.jpeg",
     "countries": [
       {
         "name": "Australie",
