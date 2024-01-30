@@ -52,7 +52,7 @@ export default function ContinentCountriesCapitals() {
   return (
     <div className="w-full text-center mt-3">
       <div className="w-full flex justify-center gap-2 flex-wrap">
-        <Checkbox label="Inverser l'affichage" id="show-country-name-frist" onChange={(val) => setShowCountryNameFirst(!val)} />
+        <Checkbox checked={!showCountryNameFirst} label="Inverser l'affichage" id="show-country-name-first" onChange={(val) => setShowCountryNameFirst(!val)} />
         <div className="flex flex-wrap gap-2 justify-center">
           <Button label="Tout révéler" onClick={showAll} disabled={showedCapitals.length === displayedCountries.length} />
           <Button label="Tout cacher" onClick={() => setShowedCapitals([])} disabled={showedCapitals.length === 0} />
