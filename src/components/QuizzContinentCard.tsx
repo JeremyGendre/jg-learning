@@ -10,7 +10,7 @@ export default function QuizzContinentCard({continent, active, onClick}: { conti
       <img 
         src={`images/${continent.image}`} 
         alt={`${continent.name.toLowerCase()}-illustration`} 
-        className={`absolute top-0 left-0 transition duration-300 group-hover:scale-110 grayscale group-hover:grayscale-[50%] ${active ? '!grayscale-0' : ''}`}
+        className={`absolute top-0 left-0 transition duration-300 group-hover:scale-110 grayscale ${active ? '!grayscale-0' : ''}`}
       />
       <div className="absolute flex items-center justify-center top-0 left-0 h-full bg-gradient-to-r from-gray-100 from-30% pr-20 z-10 w-full"/>
       <div className={`pr-20 z-10 font-bold text-gray-600 transition duration-200 relative group-hover:translate-x-2 ${active ? '!translate-x-3' : ''}`}>
