@@ -29,10 +29,12 @@ export default function Quizz({ selectedContinents, quizzSize, onQuizzEnd }: Qui
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState<UserQuizzAnswers>({});
 
+  // get the number of capitals (= number of countries) from the selected continents
   const selectedContinentsCapitalsNumber = useMemo(() => {
     return selectedContinents.reduce((acc, continent) => acc + continent.countries.length, 0)
   }, [selectedContinents])
 
+  // get all the countries from the selected continents
   const countries: Country[] = useMemo(() => {
     const countries: Country[] = [];
     selectedContinents.forEach(continent => {
@@ -81,12 +83,14 @@ export default function Quizz({ selectedContinents, quizzSize, onQuizzEnd }: Qui
       ...old,
       [quizzQuestions[currentQuestionIndex].countryName]: answer
     }));
+    // after selecting an answer, go to the next question
     if(currentQuestionIndex < quizzQuestions.length - 1) {
       setCurrentQuestionIndex(old => old + 1);
     }
   }
 
   useEffect(() => {
+    // when the user has answered all the questions, call onQuizzEnd
     if(Object.keys(answers).length === quizzQuestions.length) {
       onQuizzEnd(answers);
     }
@@ -94,7 +98,7 @@ export default function Quizz({ selectedContinents, quizzSize, onQuizzEnd }: Qui
 
   return (
     <div className="flex justify-end flex-col items-center">
-      <div className="text-3xl font-bold mb-4 text-center">{quizzQuestions[currentQuestionIndex].countryName}</div>
+      <div className="text-3xl font-bold my-12 text-center">{quizzQuestions[currentQuestionIndex].countryName}</div>
       <div className="grid grid-cols-2 gap-2 md:gap-4 w-full sm:w-4/5 md:w-fit">
         {quizzQuestions[currentQuestionIndex].capitalChoices.map((answer) => (
           <div 

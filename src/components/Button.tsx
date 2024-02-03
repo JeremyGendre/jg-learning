@@ -17,7 +17,7 @@ function ButtonContent({ children, label }: PropsWithChildren<ButtonProps>) {
 
 function useButtonClasses(props: ButtonProps = {}){
   const classes = useMemo(() => {
-    const classes = ["px-4 py-2 rounded-md transition duration-150 ring-1 ring-inset ring-transparent"];
+    const classes = ["px-4 py-2 rounded-md transition-all ring-1 ring-inset ring-transparent"];
     if(props.disabled){
       classes.push("opacity-50 cursor-not-allowed");
     } else {
@@ -25,12 +25,15 @@ function useButtonClasses(props: ButtonProps = {}){
     }
     switch(props.variant){
       case 'tinted':
-        classes.push("bg-transparent !ring-blue-700 text-blue-700");
+        classes.push("duration-200 bg-transparent !ring-blue-700 text-blue-700");
         if(!props.disabled) classes.push("hover:bg-blue-100")
         break;
       default:
-        classes.push("bg-blue-500 text-white");
-        if(!props.disabled) classes.push("hover:bg-blue-700")
+        if(!props.disabled) {
+          classes.push("duration-300 from-sky-400 via-blue-500 to-blue-500 bg-gradient-to-br bg-size-200 bg-pos-0 hover:bg-pos-100 text-white"); // bg-blue-500
+        } else {
+          classes.push("bg-blue-400 text-white") //hover:bg-blue-700
+        }
         break;
     }
     return classes.join(" ");

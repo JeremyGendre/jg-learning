@@ -23,10 +23,12 @@ export default function QuizzPage(){
     return answers;
   },[userQuizzAnswers, showCorrectAnswers])
 
+  // get the number of capitals (= number of countries) from the selected continents
   const selectedContinentsCapitalsNumber = useMemo(() => {
     return selectedContinents.reduce((acc, continent) => acc + continent.countries.length, 0)
   }, [selectedContinents])
 
+  // toggle the continent selection
   const handleCheckboxChange = useCallback((continent: Continent) => {
     if(!selectedContinents.find(c => c.name === continent.name)){
       setSelectedContinents(old => [...old, continent]);
@@ -36,10 +38,13 @@ export default function QuizzPage(){
   }, [selectedContinents])
 
   function startQuizz() {
+    // reset the user answers
     setUserQuizzAnswers({})
+    // start the quizz
     setQuizzStarted(true)
   }
 
+  // when the user stopped the quizz (not finished)
   function stopQuizz() {
     setQuizzStarted(false)
     setSelectedContinents([])
@@ -66,6 +71,7 @@ export default function QuizzPage(){
   }
 
   useEffect(() => {
+    // if the user unselects all the continents, reset the quizz size parameter
     if (!selectedContinents.length) {
       setQuizzSize('all')
     }
@@ -131,6 +137,9 @@ export default function QuizzPage(){
   return (
     <div className="w-full flex flex-col text-center gap-4 mt-4">
       Sélectionnez les continents sur lesquels vous souhaitez être interrogé :
+      <div>
+        <Button label="Tout sélectionner" onClick={() => setSelectedContinents(continents)} />
+      </div>
       <div className="flex justify-center">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {continents.map(continent => (

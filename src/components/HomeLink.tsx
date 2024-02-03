@@ -5,7 +5,7 @@ export default function HomeLink({ label, to, icon }: { label: string, to: strin
   return (
     <Link
       to={to}
-      className="px-20 py-16 font-semibold text-xl group relative overflow-hidden bg-blue-200 text-blue-800 rounded-md flex flex-col items-center justify-center gap-2 hover:bg-blue-300 transition duration-150"
+      className="px-20 py-16 font-semibold text-xl group relative overflow-hidden rounded-md flex flex-col items-center justify-center gap-2 from-sky-500 via-blue-500 to-blue-500 bg-gradient-to-br bg-size-200 bg-pos-0 hover:bg-pos-100 text-white transition-all duration-300"
     >
       {icon}
       <div className="relative">
