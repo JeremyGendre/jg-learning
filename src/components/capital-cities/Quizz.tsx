@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
-import { useContinentContext } from "../contexts/ContinentContext";
-import Continent from "../interfaces/continent.interface";
-import Country from "../interfaces/country.interface";
+import { useContinentContext } from "../../contexts/ContinentContext";
+import Continent from "../../interfaces/continent.interface";
+import Country from "../../interfaces/country.interface";
 
 export type QuizzSize = number | 'all';
 

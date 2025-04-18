@@ -8,10 +8,10 @@ interface ContinentCardProps extends React.HTMLAttributes<HTMLDivElement> {
 function ContinentCard({ continentName, image, className }: ContinentCardProps) {
   return (
     <Link 
-      to={`/learn/${continentName}/capitals`} 
+      to={`/capital-cities/learn/${continentName}/capitals`} 
       className={`p-16 font-semibold text-xl group relative overflow-hidden bg-blue-200 text-blue-800 rounded-md text-center hover:bg-blue-300 transition duration-150 ${className}`}
     >
-      <img src={`images/${image}`} alt={`${continentName.toLowerCase()}-illustration`} className="absolute top-0 left-0 group-hover:scale-110 transition duration-200"/>
+      <img src={`/images/${image}`} alt={`${continentName.toLowerCase()}-illustration`} className="absolute top-0 left-0 group-hover:scale-110 transition duration-200"/>
       <div className="opacity-0">
         {continentName}
       </div>

@@ -1,5 +1,5 @@
-import Continent from "../interfaces/continent.interface";
-import CheckIcon from "./icons/CheckIcon";
+import Continent from "../../interfaces/continent.interface";
+import CheckIcon from "../icons/CheckIcon";
 
 export default function QuizzContinentCard({continent, active, onClick}: { continent: Continent, active: boolean, onClick: () => void}) {
   return (
@@ -8,7 +8,7 @@ export default function QuizzContinentCard({continent, active, onClick}: { conti
       onClick={onClick}
     >
       <img 
-        src={`images/${continent.image}`} 
+        src={`/images/${continent.image}`} 
         alt={`${continent.name.toLowerCase()}-illustration`} 
         className={`absolute top-0 left-0 transition duration-300 group-hover:scale-110 grayscale ${active ? '!grayscale-0' : ''}`}
       />

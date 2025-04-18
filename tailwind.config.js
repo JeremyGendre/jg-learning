@@ -10,6 +10,9 @@ module.exports = {
         'pos-0': '0% 0%',
         'pos-100': '100% 100%',
       },
+      transitionProperty: {
+        'max-height': 'max-height',
+      }
     },
     screens:{
       'xs': '450px',

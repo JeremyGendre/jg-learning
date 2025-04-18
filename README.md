@@ -1,6 +1,8 @@
-# Capital Cities
+# JG Learning Cities
 
-Welcome to this app allowing to learn easily all the capital cities around the world.
+Welcome to this app allowing to learn easily different things : 
+- all the capital cities around the world.
+- the Roman Empire
 
 ## Installation
 

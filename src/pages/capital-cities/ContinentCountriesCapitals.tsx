@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { useContinentContext } from "../contexts/ContinentContext";
-import Continent from "../interfaces/continent.interface";
-import Checkbox from "../components/Checkbox";
-import Button from "../components/Button";
-import { shuffle } from "../utils/shuffle";
-import Country from "../interfaces/country.interface";
+import { useContinentContext } from "../../contexts/ContinentContext";
+import Continent from "../../interfaces/continent.interface";
+import Checkbox from "../../components/Checkbox";
+import Button from "../../components/Button";
+import { shuffle } from "../../utils/shuffle";
+import Country from "../../interfaces/country.interface";
 
 export default function ContinentCountriesCapitals() {
   const { continentName } = useParams();

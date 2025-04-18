@@ -1,7 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
 import HeaderLink from "./HeaderLink";
-import LearnIcon from "./icons/LearnIcon";
-import ListCheckIcon from "./icons/ListCheckIcon";
 
 export default function Header() {
   const { pathname } = useLocation();
@@ -11,12 +9,12 @@ export default function Header() {
         <Link to="/" className="flex gap-2 items-center font-bold text-xl text-sky-700">
           <img src="/images/earth-icon.png" alt="Logo" className="w-8 h-8" />
           <div className="hidden sm:block">
-            Capital Cities
+            JG Learning
           </div>
         </Link>
         <div className="flex flex-wrap gap-2 flex-1 justify-end sm:justify-normal">
-          <HeaderLink to="/learn" label="Learn" icon={<LearnIcon className="text-base" />} active={pathname.includes('/learn')}/>
-          <HeaderLink to="/quizz" label="Quizz" icon={<ListCheckIcon className="text-base" />} active={pathname.includes('/quizz')}/>
+          <HeaderLink to="/capital-cities" label="Capitales" active={pathname.includes('capital-cities')}/>
+          <HeaderLink to="/roman-empire" label="Empire Romain" active={pathname.includes('roman-empire')}/>
         </div>
       </div>
     </header>

@@ -1,10 +1,10 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { useContinentContext } from "../contexts/ContinentContext";
-import QuizzContinentCard from "../components/QuizzContinentCard";
-import Button from "../components/Button";
-import Quizz, { QuizzSize, UserQuizzAnswers } from "../components/Quizz";
-import Continent from "../interfaces/continent.interface";
-import Checkbox from "../components/Checkbox";
+import { useContinentContext } from "../../contexts/ContinentContext";
+import QuizzContinentCard from "../../components/capital-cities/QuizzContinentCard";
+import Button from "../../components/Button";
+import Quizz, { QuizzSize, UserQuizzAnswers } from "../../components/capital-cities/Quizz";
+import Continent from "../../interfaces/continent.interface";
+import Checkbox from "../../components/Checkbox";
 
 export default function QuizzPage(){
   const { continents } = useContinentContext();

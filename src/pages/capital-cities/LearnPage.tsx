@@ -1,5 +1,5 @@
-import ContinentCard from "../components/ContinentCard";
-import { useContinentContext } from "../contexts/ContinentContext";
+import ContinentCard from "../../components/capital-cities/ContinentCard";
+import { useContinentContext } from "../../contexts/ContinentContext";
 
 export default function LearnPage() {
   const { continents } = useContinentContext();
