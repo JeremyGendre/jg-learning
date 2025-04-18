@@ -26,4 +26,4 @@ and that's it !
 If an error occured, try :
 - `firebase login --reauth` to allow firebase CLI to relog and make  it able to fetch the projects list and deploy. 
 
-deployed url : [capital-cities-7d034.web.app](https://capital-cities-7d034.web.app/) 
+deployed url : [jg-learning.web.app](https://jg-learning.web.app/) 

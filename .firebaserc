@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "capital-cities-7d034"
-  }
+    "default": "jg-learning"
+  },
+  "targets": {},
+  "etags": {}
 }
