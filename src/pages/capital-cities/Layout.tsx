@@ -27,6 +27,7 @@ export default function CapitalCitiesLayout() {
           />
         </div>
       </div>
+      <hr className="w-full my-2"/>
       <Outlet />
     </div>
   );

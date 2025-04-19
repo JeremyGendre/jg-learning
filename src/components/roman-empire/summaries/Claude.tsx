@@ -1,9 +1,10 @@
+import ReignPageLayout from "../../../pages/roman-empire/ReignPageLayout";
 import Accordion from "../../Accordion"
 import ListEnum from "../../ListEnum";
 
 export default function Summary() {
   return (
-    <div className="flex flex-col gap-4">
+    <ReignPageLayout reign="Claude">
       <p>
       Né Tiberius Claudius Drusus, il est le premier empereur né hors d’Italie (à Lugdunum, Lyon) et succède à Caligula suite à un coup de force de la garde prétorienne. Issu de la famille impériale mais longtemps écarté du pouvoir à cause de son handicap physique et son image d’intellectuel, il surprend par la stabilité et la richesse de son règne.
       </p>
@@ -84,6 +85,6 @@ export default function Summary() {
         </ListEnum>
       </Accordion>
       <p>Claude a longtemps souffert d’une image de marionnette dominée par les femmes et les affranchis, véhiculée par les historiens antiques. Mais les recherches modernes le réhabilitent en tant qu’administrateur efficace, réformateur pragmatique, et empereur soucieux de l’unité de l’Empire. S’il manquait peut-être d’autorité politique personnelle, son règne fut stable et structurant.</p>
-    </div>
+    </ReignPageLayout>
   );
 }

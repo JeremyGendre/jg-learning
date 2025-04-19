@@ -1,9 +1,10 @@
+import ReignPageLayout from "../../../pages/roman-empire/ReignPageLayout";
 import Accordion from "../../Accordion"
 import ListEnum from "../../ListEnum";
 
 export default function Summary() {
   return (
-    <div className="flex flex-col gap-4">
+    <ReignPageLayout reign="Néron">
       <p>
       Né Lucius Domitius Ahenobarbus, il devient empereur à 17 ans sous le nom de Nero Claudius Caesar Augustus Germanicus après avoir été adopté par Claude. Son règne, d’abord prometteur, glisse progressivement vers l’autoritarisme, les excès, et la révolte générale.
       </p>
@@ -88,6 +89,6 @@ export default function Summary() {
           <li>Il a été divinisé dans l'Est de l'Empire après sa mort, et des rumeurs de son retour ont circulé pendant des années (Néron redivivus).</li>
         </ListEnum>
       </Accordion>
-    </div>
+    </ReignPageLayout>
   );
 }

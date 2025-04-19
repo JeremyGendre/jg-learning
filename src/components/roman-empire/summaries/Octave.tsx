@@ -1,9 +1,10 @@
+import ReignPageLayout from "../../../pages/roman-empire/ReignPageLayout";
 import Accordion from "../../Accordion"
 import ListEnum from "../../ListEnum";
 
 export default function Summary() {
   return (
-    <div className="flex flex-col gap-4">
+    <ReignPageLayout reign="Octave (Auguste)">
       <p>
       Né Gaius Octavius, petit-neveu et fils adoptif de Jules César, il devient le premier empereur romain sous le nom d’Auguste. Son règne marque la fin de la République et l’instauration du Principat, une monarchie déguisée sous des formes républicaines.
       </p>
@@ -90,6 +91,6 @@ export default function Summary() {
         </ListEnum>
       </Accordion>
       <p>Auguste est le fondateur de l’Empire romain, non pas par un coup d’État brutal, mais par une habile reconstruction des institutions autour de sa personne. Fin politicien, maître de la communication et de la diplomatie, il a établi un modèle de pouvoir durable qui servira de référence aux empereurs pendant des siècles. Son règne, long et stable, incarne l’âge d’or de Rome.</p>
-    </div>
+    </ReignPageLayout>
   );
 }

@@ -3,3 +3,7 @@ export { default as TibèreSummary} from "./Tibère";
 export { default as CaligulaSummary} from "./Caligula";
 export { default as ClaudeSummary} from "./Claude";
 export { default as NeronSummary} from "./Neron";
+export { default as AnneeDesQuatreEmpereursSummary} from "./AnneeDesQuatreEmpereurs";
+export { default as VespasienSummary} from "./Vespasien";
+export { default as TitusSummary} from "./Titus";
+export { default as DomitienSummary} from "./Domitien";

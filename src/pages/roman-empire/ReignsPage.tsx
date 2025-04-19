@@ -1,5 +1,5 @@
 import ReignPageLink from "../../components/roman-empire/ReignPageLink";
-import { CaligulaSummary, ClaudeSummary, NeronSummary, OctaveSummary, TibèreSummary } from "../../components/roman-empire/summaries";
+import { AnneeDesQuatreEmpereursSummary, CaligulaSummary, ClaudeSummary, DomitienSummary, NeronSummary, OctaveSummary, TibèreSummary, TitusSummary, VespasienSummary } from "../../components/roman-empire/summaries";
 import Reign from "../../interfaces/reign.interface";
 
 export const reigns: Reign[] = [
@@ -15,7 +15,7 @@ export const reigns: Reign[] = [
   {
     name: "Tibère",
     type: "emperor",
-    birthDate: "42",
+    birthDate: "-42",
     deathDate: "37",
     reignStart: "14",
     reignEnd: "37",
@@ -33,7 +33,7 @@ export const reigns: Reign[] = [
   {
     name: "Claude",
     type: "emperor",
-    birthDate: "10",
+    birthDate: "-10",
     deathDate: "54",
     reignStart: "41",
     reignEnd: "54",
@@ -53,13 +53,7 @@ export const reigns: Reign[] = [
     type: "period",
     reignStart: "68",
     reignEnd: "69",
-    summary: (
-      <div>
-        <p>
-          ...
-        </p>
-      </div>
-    )
+    summary: <AnneeDesQuatreEmpereursSummary />
   },
   {
     name: "Vespasien",
@@ -68,13 +62,7 @@ export const reigns: Reign[] = [
     deathDate: "79",
     reignStart: "69",
     reignEnd: "79",
-    summary: (
-      <div>
-        <p>
-          ...
-        </p>
-      </div>
-    )
+    summary: <VespasienSummary />
   },
   {
     name: "Titus",
@@ -83,13 +71,7 @@ export const reigns: Reign[] = [
     deathDate: "81",
     reignStart: "79",
     reignEnd: "81",
-    summary: (
-      <div>
-        <p>
-          ...
-        </p>
-      </div>
-    )
+    summary: <TitusSummary />
   },
   {
     name: "Domitien",
@@ -98,13 +80,7 @@ export const reigns: Reign[] = [
     deathDate: "96",
     reignStart: "81",
     reignEnd: "96",
-    summary: (
-      <div>
-        <p>
-          ...
-        </p>
-      </div>
-    )
+    summary: <DomitienSummary/>
   },
   {
     name: "Nerva",

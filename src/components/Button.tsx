@@ -1,9 +1,16 @@
+import classNames from 'classnames';
 import { PropsWithChildren, useMemo } from 'react';
 import { Link, LinkProps } from 'react-router-dom';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   label?: string;
   variant?: 'default' | 'tinted';
+  size?: 'sm' | 'md' | 'lg';
+};
+
+const defaultProps: ButtonProps = {
+  variant: 'default',
+  size: 'md',
 };
 
 function ButtonContent({ children, label }: PropsWithChildren<ButtonProps>) {
@@ -17,34 +24,31 @@ function ButtonContent({ children, label }: PropsWithChildren<ButtonProps>) {
 
 function useButtonClasses(props: ButtonProps = {}){
   const classes = useMemo(() => {
-    const classes = ["px-4 py-2 rounded-md transition-all ring-1 ring-inset ring-transparent"];
-    if(props.disabled){
-      classes.push("opacity-50 cursor-not-allowed");
-    } else {
-      classes.push("cursor-pointer");
-    }
-    switch(props.variant){
-      case 'tinted':
-        classes.push("duration-200 bg-transparent !ring-blue-700 text-blue-700");
-        if(!props.disabled) classes.push("hover:bg-blue-100")
-        break;
-      default:
-        if(!props.disabled) {
-          classes.push("duration-300 from-sky-400 via-blue-500 to-blue-500 bg-gradient-to-br bg-size-200 bg-pos-0 hover:bg-pos-100 text-white"); // bg-blue-500
-        } else {
-          classes.push("bg-blue-400 text-white") //hover:bg-blue-700
-        }
-        break;
-    }
-    return classes.join(" ");
+    const size = props.size || 'md';
+    const variant = props.variant || 'default';
+    return [
+      "rounded-md transition-all ring-1 ring-inset ring-transparent",
+      {
+        'text-sm px-2 py-1.5': size === 'sm',
+        'text-base px-4 py-2': size === 'md',
+        'text-lg px-6 py-3': size === 'lg',
+        'opacity-50 cursor-not-allowed': props.disabled,
+        'cursor-pointer': !props.disabled,
+        'duration-200 bg-transparent !ring-blue-700 text-blue-700': variant === 'tinted',
+        'hover:bg-blue-100': !props.disabled && variant === 'tinted',
+        'duration-300 from-sky-400 via-blue-500 to-blue-500 bg-gradient-to-br bg-size-200 bg-pos-0 hover:bg-pos-100 text-white': !props.disabled && variant === 'default',
+        'bg-blue-400 text-white': props.disabled && variant === 'default',
+      }
+    ]
   }, [props]);
   return classes;
 }
 
-export default function Button({ children, label, className, ...otherProps }: PropsWithChildren<ButtonProps>) {
-  const classes = useButtonClasses({ ...otherProps });
+export default function Button(props: PropsWithChildren<ButtonProps>) {
+  const { children, label, className, ...otherProps } = { ...defaultProps, ...props };
+  const classes = useButtonClasses(otherProps);
   return (
-    <button className={`${classes} ${className}`} {...otherProps}>
+    <button className={classNames(classes, className)} {...otherProps}>
       <ButtonContent label={label}>
         {children}
       </ButtonContent>
@@ -52,10 +56,11 @@ export default function Button({ children, label, className, ...otherProps }: Pr
   );
 }
 
-export function ButtonLink({ children, label, to, className, ...otherProps }: PropsWithChildren<ButtonProps & LinkProps>) {
-  const classes = useButtonClasses({ ...otherProps });
+export function ButtonLink(props: PropsWithChildren<ButtonProps & LinkProps>) {
+  const { children, label, to, className, size, ...otherProps } = props;
+  const classes = useButtonClasses({ ...otherProps, size });
   return (
-    <Link to={to} className={`${classes} ${className}`} {...otherProps}>
+    <Link to={to} className={classNames(classes, className)} {...otherProps}>
       <ButtonContent label={label}>
         {children}
       </ButtonContent>

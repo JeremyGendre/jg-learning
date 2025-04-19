@@ -1,9 +1,10 @@
+import ReignPageLayout from "../../../pages/roman-empire/ReignPageLayout";
 import Accordion from "../../Accordion"
 import ListEnum from "../../ListEnum";
 
 export default function Summary() {
   return (
-    <div className="flex flex-col gap-4">
+    <ReignPageLayout reign="Tibère">
       <p>
         Fils adoptif et successeur d’Auguste, Tibère est un général expérimenté et administrateur compétent, mais son règne est marqué par l’ombre, la suspicion, et une rupture croissante avec les élites romaines.
       </p>
@@ -66,6 +67,6 @@ export default function Summary() {
       <p>
       En résumé, Tibère est un empereur efficace mais impopulaire, dont le règne marque la fin des illusions républicaines et annonce un pouvoir impérial plus autoritaire. Il incarne la face sombre de l’Empire : la stabilité obtenue au prix de la liberté.
       </p>
-    </div>
+    </ReignPageLayout>
   );
 }

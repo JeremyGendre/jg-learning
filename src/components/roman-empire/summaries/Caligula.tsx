@@ -1,9 +1,10 @@
+import ReignPageLayout from "../../../pages/roman-empire/ReignPageLayout";
 import Accordion from "../../Accordion"
 import ListEnum from "../../ListEnum";
 
 export default function Summary() {
   return (
-    <div className="flex flex-col gap-4">
+    <ReignPageLayout reign="Caligula">
       <p>
       Né Caius Julius Caesar Germanicus, il est surnommé Caligula (« petites bottes ») par les soldats de Germanicus, son père, lorsqu’il les accompagnait enfant en campagne. Son règne, court mais intense, est souvent associé à la folie, la cruauté et la démesure, bien que certains aspects soient à nuancer.
       </p>
@@ -77,6 +78,6 @@ export default function Summary() {
       <p>
       Beaucoup de ce que nous savons de Caligula vient de sources hostiles, notamment Suétone, Dion Cassius et Tacite. Ces auteurs, très critiques envers l’absolutisme impérial, ont sans doute noirci le tableau. Si Caligula a été clairement instable et dangereux, il a aussi été victime d’une propagande posthume intense, utilisée pour justifier sa chute.
       </p>
-    </div>
+    </ReignPageLayout>
   );
 }
