@@ -1,5 +1,5 @@
 import ReignPageLink from "../../components/roman-empire/ReignPageLink";
-import { AnneeDesQuatreEmpereursSummary, CaligulaSummary, ClaudeSummary, DomitienSummary, NeronSummary, OctaveSummary, TibèreSummary, TitusSummary, VespasienSummary } from "../../components/roman-empire/summaries";
+import { AnneeDesQuatreEmpereursSummary, AntoninLePieuxSummary, CaligulaSummary, CaracallaSummary, ClaudeSummary, CommodeSummary, DeuxiemeAnneeDesQuatreEmpereursSummary, DomitienSummary, HadrienSummary, MacrinSummary, MarcAureleSummary, NeronSummary, NervaSummary, OctaveSummary, SeptimeSevereSummary, TibèreSummary, TitusSummary, TrajanSummary, VespasienSummary } from "../../components/roman-empire/summaries";
 import Reign from "../../interfaces/reign.interface";
 
 export const reigns: Reign[] = [
@@ -49,7 +49,7 @@ export const reigns: Reign[] = [
     summary: <NeronSummary/>
   },
   {
-    name: "Année des 4 empereurs",
+    name: "Année des 4 empereurs (68-69)",
     type: "period",
     reignStart: "68",
     reignEnd: "69",
@@ -89,13 +89,7 @@ export const reigns: Reign[] = [
     deathDate: "98",
     reignStart: "96",
     reignEnd: "98",
-    summary: (
-      <div>
-        <p>
-          ...
-        </p>
-      </div>
-    )
+    summary: <NervaSummary />
   },
   {
     name: "Trajan",
@@ -104,13 +98,7 @@ export const reigns: Reign[] = [
     deathDate: "117",
     reignStart: "98",
     reignEnd: "117",
-    summary: (
-      <div>
-        <p>
-          ...
-        </p>
-      </div>
-    )
+    summary: <TrajanSummary />
   },
   {
     name: "Hadrien",
@@ -119,13 +107,7 @@ export const reigns: Reign[] = [
     deathDate: "138",
     reignStart: "117",
     reignEnd: "138",
-    summary: (
-      <div>
-        <p>
-          ...
-        </p>
-      </div>
-    )
+    summary: <HadrienSummary />
   },
   {
     name: "Antonin le Pieux",
@@ -134,13 +116,7 @@ export const reigns: Reign[] = [
     deathDate: "161",
     reignStart: "138",
     reignEnd: "161",
-    summary: (
-      <div>
-        <p>
-          ...
-        </p>
-      </div>
-    )
+    summary: <AntoninLePieuxSummary />
   },
   {
     name: "Marc Aurèle",
@@ -149,13 +125,7 @@ export const reigns: Reign[] = [
     deathDate: "180",
     reignStart: "161",
     reignEnd: "180",
-    summary: (
-      <div>
-        <p>
-          ...
-        </p>
-      </div>
-    )
+    summary: <MarcAureleSummary />
   },
   {
     name: "Commode",
@@ -164,26 +134,14 @@ export const reigns: Reign[] = [
     deathDate: "192",
     reignStart: "180",
     reignEnd: "192",
-    summary: (
-      <div>
-        <p>
-          ...
-        </p>
-      </div>
-    )
+    summary: <CommodeSummary />
   },
   {
-    name: "2ème année des 4 empereurs",
+    name: "2ème année des 4 empereurs (192-193)",
     type: "period",
     reignStart: "192",
     reignEnd: "193",
-    summary: (
-      <div>
-        <p>
-          ...
-        </p>
-      </div>
-    )
+    summary: <DeuxiemeAnneeDesQuatreEmpereursSummary />
   },
   {
     name: "Septime Sévère",
@@ -192,13 +150,7 @@ export const reigns: Reign[] = [
     deathDate: "211",
     reignStart: "193",
     reignEnd: "211",
-    summary: (
-      <div>
-        <p>
-          ...
-        </p>
-      </div>
-    )
+    summary: <SeptimeSevereSummary />
   },
   {
     name: "Caracalla",
@@ -207,13 +159,7 @@ export const reigns: Reign[] = [
     deathDate: "217",
     reignStart: "198",
     reignEnd: "217",
-    summary: (
-      <div>
-        <p>
-          ...
-        </p>
-      </div>
-    )
+    summary: <CaracallaSummary />
   },
   {
     name: "Macrin (+ Diaduménien)",
@@ -222,13 +168,7 @@ export const reigns: Reign[] = [
     deathDate: "218",
     reignStart: "217",
     reignEnd: "218",
-    summary: (
-      <div>
-        <p>
-          ...
-        </p>
-      </div>
-    )
+    summary: <MacrinSummary />
   },
   {
     name: "Héliogabale",
