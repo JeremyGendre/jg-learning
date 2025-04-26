@@ -29,7 +29,7 @@ export default function ReignPageLayout({ children, reign }: { children: React.R
   return (
     <div className="flex flex-col gap-4">
       {children}
-      <div className="flex flex-col gap-1 sticky bottom-0 left-0 bg-gray-50 py-2">
+      <div className="flex flex-col gap-1 sticky bottom-0 left-0 bg-gray-50 py-2 border-t">
         <div className="flex justify-between items-center text-gray-600 font-bold text-sm">
           {reignsData?.previous && (<div>Précédent ({reignsData.previous.start}, {reignsData.previous.end})</div>)}
           <div className="w-1"/>
