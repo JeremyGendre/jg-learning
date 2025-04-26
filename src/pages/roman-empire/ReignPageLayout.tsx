@@ -14,22 +14,26 @@ export default function ReignPageLayout({ children, reign }: { children: React.R
     return {
       next: nextReign ? {
         to: `/roman-empire/reigns/${nextReign?.name}`,
-        label: `${nextReign?.name} (${nextReign?.reignStart} - ${nextReign?.reignEnd})`,
+        start: nextReign?.reignStart,
+        end: nextReign?.reignEnd,
+        label: nextReign?.name,
       } : null,
       previous: previousReign ? {
         to: `/roman-empire/reigns/${previousReign?.name}`,
-        label: `${previousReign?.name} (${previousReign?.reignStart} - ${previousReign?.reignEnd})`,
+        start: previousReign?.reignStart,
+        end: previousReign?.reignEnd,
+        label: previousReign?.name,
       } : null,
     }
   }, [reign]);
   return (
     <div className="flex flex-col gap-4">
       {children}
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-1 sticky bottom-0 left-0 bg-gray-50 py-2">
         <div className="flex justify-between items-center text-gray-600 font-bold text-sm">
-          {reignsData?.previous && (<div>Précédent :</div>)}
+          {reignsData?.previous && (<div>Précédent ({reignsData.previous.start}, {reignsData.previous.end})</div>)}
           <div className="w-1"/>
-          {reignsData?.next && (<div>Suivant :</div>)}
+          {reignsData?.next && (<div>Suivant ({reignsData.next.start}, {reignsData.next.end})</div>)}
         </div>
         <div className="flex justify-between items-center">
           {reignsData?.previous && (
