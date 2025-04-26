@@ -1,5 +1,5 @@
 import ReignPageLink from "../../components/roman-empire/ReignPageLink";
-import { AnneeDesQuatreEmpereursSummary, AntoninLePieuxSummary, CaligulaSummary, CaracallaSummary, ClaudeSummary, CommodeSummary, DeuxiemeAnneeDesQuatreEmpereursSummary, DomitienSummary, HadrienSummary, MacrinSummary, MarcAureleSummary, NeronSummary, NervaSummary, OctaveSummary, SeptimeSevereSummary, TibèreSummary, TitusSummary, TrajanSummary, VespasienSummary } from "../../components/roman-empire/summaries";
+import { AlexandreSevereSummary, AnarchieMilitaireSummary, AnneeDesQuatreEmpereursSummary, AntoninLePieuxSummary, CaligulaSummary, CaracallaSummary, ClaudeSummary, CommodeSummary, ConstantinLeGrandSummary, DerniersEmpereursDOccidentSummary, DeuxiemeAnneeDesQuatreEmpereursSummary, DomitienSummary, DynastieDesTheodosiensSummary, DynastieDesValentiniensSummary, EmpereursIllyriensSummary, HadrienSummary, HeliogabaleSummary, MacrinSummary, MarcAureleSummary, NeronSummary, NervaSummary, OctaveSummary, SeptimeSevereSummary, TetrarchieEtDynastieDesConstantiniensSummary, TibèreSummary, TitusSummary, TrajanSummary, ValerienEtGallienSummary, VespasienSummary } from "../../components/roman-empire/summaries";
 import Reign from "../../interfaces/reign.interface";
 
 export const reigns: Reign[] = [
@@ -162,7 +162,7 @@ export const reigns: Reign[] = [
     summary: <CaracallaSummary />
   },
   {
-    name: "Macrin (+ Diaduménien)",
+    name: "Macrin",
     type: "emperor",
     birthDate: "165",
     deathDate: "218",
@@ -177,13 +177,7 @@ export const reigns: Reign[] = [
     deathDate: "222",
     reignStart: "218",
     reignEnd: "222",
-    summary: (
-      <div>
-        <p>
-          ...
-        </p>
-      </div>
-    )
+    summary: <HeliogabaleSummary />
   },
   {
     name: "Alexandre Sévère",
@@ -192,65 +186,35 @@ export const reigns: Reign[] = [
     deathDate: "235",
     reignStart: "222",
     reignEnd: "235",
-    summary: (
-      <div>
-        <p>
-          ...
-        </p>
-      </div>
-    )
+    summary: <AlexandreSevereSummary/>
   },
   {
     name: "Anarchie militaire",
     type: "period",
     reignStart: "235",
     reignEnd: "253",
-    summary: (
-      <div>
-        <p>
-          ...
-        </p>
-      </div>
-    )
+    summary: <AnarchieMilitaireSummary />
   },
   {
-    name: "Trente tyrans",
+    name: "Valérien et Gallien",
     type: "period",
     reignStart: "253",
     reignEnd: "268",
-    summary: (
-      <div>
-        <p>
-          ...
-        </p>
-      </div>
-    )
+    summary: <ValerienEtGallienSummary />
   },
   {
     name: "Empereurs Illyriens",
     type: "period",
     reignStart: "268",
     reignEnd: "285",
-    summary: (
-      <div>
-        <p>
-          ...
-        </p>
-      </div>
-    )
+    summary: <EmpereursIllyriensSummary />
   },
   {
     name: "Tétrarchies et dynastie des Constantiniens",
     type: "period",
     reignStart: "284",
     reignEnd: "364",
-    summary: (
-      <div>
-        <p>
-          ...
-        </p>
-      </div>
-    )
+    summary: <TetrarchieEtDynastieDesConstantiniensSummary />
   },
   {
     name: "Constantin 1er le Grand",
@@ -259,52 +223,28 @@ export const reigns: Reign[] = [
     deathDate: "337",
     reignStart: "306",
     reignEnd: "337",
-    summary: (
-      <div>
-        <p>
-          ...
-        </p>
-      </div>
-    )
+    summary: <ConstantinLeGrandSummary />
   },
   {
     name: "Dynastie des Valentiniens",
     type: "period",
     reignStart: "364",
     reignEnd: "392",
-    summary: (
-      <div>
-        <p>
-          ...
-        </p>
-      </div>
-    )
+    summary: <DynastieDesValentiniensSummary />
   },
   {
     name: "Dynastie des Théodosiens",
     type: "period",
     reignStart: "379",
     reignEnd: "457",
-    summary: (
-      <div>
-        <p>
-          ...
-        </p>
-      </div>
-    )
+    summary: <DynastieDesTheodosiensSummary />
   },
   {
     name: "Derniers empereurs d'Occident",
     type: "period",
     reignStart: "455",
     reignEnd: "476",
-    summary: (
-      <div>
-        <p>
-          ...
-        </p>
-      </div>
-    )
+    summary: <DerniersEmpereursDOccidentSummary />
   },
 ];
 
